@@ -1,0 +1,12 @@
+.logo_container{
+    background-color: #FAFAFA;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg_logo{
+    width: 35vw;
+}
