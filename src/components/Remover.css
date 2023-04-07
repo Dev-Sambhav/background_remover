@@ -5,7 +5,7 @@
 }
 
 .remover_container{
-    margin: 1rem 5rem;
+    margin: .5rem 5rem;
 }
 
 .remover_logo{
@@ -20,6 +20,7 @@
     flex-direction: column;
     row-gap: 10px;
     font-size: 1.5rem;
+    margin-top: 1.4rem;
 }
 
 input{
@@ -31,9 +32,23 @@ input{
     color: white;
 }
 
+.btn_disabled{
+    background-color: gray;
+    cursor:not-allowed;
+}
+
 .btn_download{
     background-color: #00C853;
     color: white;
     margin-top: .2rem;
     width: 100%;
 }
+
+.final_img_area{
+    background: transparent;
+    margin-top: .5rem;
+    overflow-y: scroll;
+    max-height: 65vh;
+    border-radius: 7px;
+}
+
