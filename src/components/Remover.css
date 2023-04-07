@@ -52,3 +52,9 @@ input{
     border-radius: 7px;
 }
 
+/* for mobiles */
+@media (max-width: 992px) {
+    .container{
+        width: 100vw;
+    }
+  }
