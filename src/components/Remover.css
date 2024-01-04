@@ -57,4 +57,10 @@ input{
     .container{
         width: 100vw;
     }
+    .remover_container{
+        margin: 0 1rem;
+    }
+    .final_img_area{
+        margin-top: 1.3rem;
+    }
   }
