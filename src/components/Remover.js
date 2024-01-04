@@ -19,7 +19,7 @@ const Remover = () => {
     formData.append("image_file", selectedFile);
     formData.append("size", "auto");
 
-    const api_key = "D29hLkE8Vtt5q7D7t9HaFLDy";
+    const api_key = process.env.REACT_APP_API_BG;
 
     // send to the server
     await fetch("https://api.remove.bg/v1.0/removebg", {
