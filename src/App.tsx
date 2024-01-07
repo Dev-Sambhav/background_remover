@@ -1,5 +1,6 @@
+import React from 'react';
 import './App.css';
-import { Logo, Remover } from './components';
+import { Logo, Remover } from './components/index';
 
 function App() {
   return (
