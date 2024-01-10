@@ -1,16 +1,15 @@
 import React, { useState, ChangeEvent } from "react";
 import axios from 'axios';
-import "./Remover.css"
+import {FaFileDownload} from "react-icons/fa"
 
 const Remover: React.FC = () => {
-    
+
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [finalUrl, setFinalUrl] = useState<string | null>(null);
     const [isUpload, setIsUpload] = useState<boolean>(false);
 
     const handleFileInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         let image = e.target.files?.[0]; // it will return only the first selected file
-       
         setSelectedFile(image || null);
     };
 
@@ -43,39 +42,47 @@ const Remover: React.FC = () => {
 
     return (
         <div className="container">
-            <div className="remover_container">
-                <form className="info_container">
-                    <label className="info_text">Select a File</label>
-                    <input type="file" onChange={handleFileInputChange} required />
-                    {!isUpload ? (
-                        <button
-                            type="button"
-                            onClick={handleFileUpload}
-                            className="btn btn_upload"
-                        >
-                            Upload
-                        </button>
-                    ) : (
-                        <button
-                            type="button"
-                            onClick={handleFileUpload}
-                            className="btn btn_upload btn_disabled"
-                            disabled={true}
-                        >
-                            Uploading...
-                        </button>
-                    )}
-                </form>
-                {finalUrl && (
-                    <a href={finalUrl} download="no-back.png">
-                        <button className="btn btn_download">Download</button>
-                    </a>
-                )}
-                {finalUrl && (
-                    <div className="final_img_area">
-                        <img src={finalUrl} alt="final_img" className="final_img" />
+            <div className="remover_container text-slate-100 flex justify-around items-center w-screen h-screen ">
+                <div className="titie">
+                    {/* <div className="titile text-slate-200 absolute md:left-12 top-56"> */}
+                    <h4 className="lg:text-5xl text-3xl">Remove Background <span className="block">with ease</span> </h4>
+                </div>
+                <div className="flex justify-evenly flex-col">
+                    <form className="info_container flex justify-between flex-col h-1/6 ">
+                        <label htmlFor="userImg"  className="info_text">Select a File</label>
+                        <input type="file" id="userImg" onChange={handleFileInputChange} required />
+                        {!isUpload ? (
+                            <button
+                                type="button"
+                                onClick={handleFileUpload}
+                                className=" bg-purple-600 p-2 rounded"
+                            >
+                                Upload
+                            </button>
+                        ) : (
+                            <button
+                                type="button"
+                                onClick={handleFileUpload}
+                                className="bg-purple-300 p-2 rounded"
+                                disabled={true}
+                            >
+                                Uploading...
+                            </button>
+                        )}
+                    </form>
+                    <div className="">
+                        {finalUrl && (
+                            <div className="final_img_area">
+                                <img src={finalUrl} alt="final_img" className=" w-2/6 h-auto" />
+                            </div>
+                        )}
+                        {finalUrl && (
+                            <a href={finalUrl} download="Removed Background.png" >
+                                <button className="flex bg-purple-600 p-2 rounded ">Download <FaFileDownload /> </button>
+                            </a>
+                        )}
                     </div>
-                )}
+                </div>
             </div>
         </div>
     );

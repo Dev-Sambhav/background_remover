@@ -1,4 +1,3 @@
-import Logo from "./Logo";
 import Remover from "./Remover";
-
-export {Logo, Remover};
+import Header from "./Header";
+export { Remover, Header};
