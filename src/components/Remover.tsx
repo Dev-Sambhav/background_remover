@@ -41,10 +41,10 @@ const Remover: React.FC = () => {
     };
 
     return (
-        <div className="container">
-            <div className="remover_container text-slate-100 flex justify-around items-center flex-col w-screen h-screen md:flex-row lg:flex-row">
+        <div className="background w-screen h-screen ">
+            <div className="remover_container text-slate-100 flex justify-evenly items-center flex-col w-screen h-screen md:flex-col lg:flex-col">
                 <div className="title">
-                    <h4 className="lg:text-5xl text-3xl">Remove Background <span className="block">with ease</span> </h4>
+                    <h4 className="lg:text-5xl text-3xl">Remove Background <span className=" inline-block">with ease</span> </h4>
                 </div>
                 <div className="flex justify-center items-center flex-col h-1/2">
                     <form className="info_container flex justify-between  flex-col h-1/6 w-fit ">
