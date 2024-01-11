@@ -77,7 +77,7 @@ const Remover: React.FC = () => {
                         )}
                         {finalUrl && (
                             <a href={finalUrl} download="Removed Background.png" >
-                                <button className=" bg-purple-600 p-2 rounded flex items-center m-1 w-full ">Download <FaFileDownload /> </button>
+                                <button className=" bg-purple-600 p-2 rounded flex items-center m-1 w-full">Download <div className=" px-1"><FaFileDownload /></div> </button>
                             </a>
                         )}
                     </div>
