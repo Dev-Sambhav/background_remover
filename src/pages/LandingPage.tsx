@@ -3,7 +3,7 @@ import { Remover } from '../components/index';
 import "../index.css"
 
 const LandingPage = ()  => {
-  return (
+  return ( 
     <div className="App overflow-hidden absolute">
         <Remover /> 
     </div>
