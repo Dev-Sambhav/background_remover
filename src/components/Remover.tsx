@@ -42,15 +42,14 @@ const Remover: React.FC = () => {
 
     return (
         <div className="container">
-            <div className="remover_container text-slate-100 flex justify-around items-center w-screen h-screen ">
-                <div className="titie">
-                    {/* <div className="titile text-slate-200 absolute md:left-12 top-56"> */}
+            <div className="remover_container text-slate-100 flex justify-around items-center flex-col w-screen h-screen md:flex-row lg:flex-row">
+                <div className="title">
                     <h4 className="lg:text-5xl text-3xl">Remove Background <span className="block">with ease</span> </h4>
                 </div>
-                <div className="flex justify-evenly flex-col">
-                    <form className="info_container flex justify-between flex-col h-1/6 ">
+                <div className="flex justify-center items-center flex-col h-1/2">
+                    <form className="info_container flex justify-between  flex-col h-1/6 w-fit ">
                         <label htmlFor="userImg"  className="info_text">Select a File</label>
-                        <input type="file" id="userImg" onChange={handleFileInputChange} required />
+                        <input type="file" id="userImg" className=" pb-7" onChange={handleFileInputChange} required />
                         {!isUpload ? (
                             <button
                                 type="button"
@@ -70,15 +69,15 @@ const Remover: React.FC = () => {
                             </button>
                         )}
                     </form>
-                    <div className="">
+                    <div className="flex justify-center items-center flex-col mt-8 p-4">
                         {finalUrl && (
-                            <div className="final_img_area">
+                            <div className="final_img_area w-fit grid place-items-center">
                                 <img src={finalUrl} alt="final_img" className=" w-2/6 h-auto" />
                             </div>
                         )}
                         {finalUrl && (
                             <a href={finalUrl} download="Removed Background.png" >
-                                <button className="flex bg-purple-600 p-2 rounded ">Download <FaFileDownload /> </button>
+                                <button className=" bg-purple-600 p-2 rounded flex items-center m-1 w-full ">Download <FaFileDownload /> </button>
                             </a>
                         )}
                     </div>
