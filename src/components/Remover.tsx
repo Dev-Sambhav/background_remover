@@ -61,7 +61,6 @@ const Remover: React.FC = () => {
                         ) : (
                             <button
                                 type="button"
-                                onClick={handleFileUpload}
                                 className="bg-purple-300 p-2 rounded"
                                 disabled={true}
                             >
