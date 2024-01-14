@@ -32,9 +32,8 @@ For new features or improvements, open an issue to discuss your ideas before sta
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
 3. Implement your changes in React JS.
-4. Ensure your code adheres to the [coding guidelines](#coding-guidelines).
-5. Test your changes locally, considering the [testing guidelines](#testing).
-6. Submit a pull request with a clear description of your changes.
+4. Test your changes locally, considering the [testing guidelines](#testing).
+5. Submit a pull request with a clear description of your changes.
 
 ## Development Setup
 
